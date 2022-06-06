@@ -5,10 +5,8 @@ class FreeUser(User):
 
     
     def __init__(self,name, email, address, driver_licence):
-        # use the logic from the parent Animal class without duplicating code
-        parent_instance = super()
         #use comma to pass each argument
-        parent_instance.__init__(name, email, address, driver_licence)
+        super().__init__(name, email, address, driver_licence)
          
     #Override the add_post method for FreeUser so that an instance of FreeUser is only able to make two posts.
     #method for user to create new post that belongs to class itself(static method)

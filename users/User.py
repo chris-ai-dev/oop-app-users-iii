@@ -3,6 +3,8 @@
 from datetime import datetime
 
 class User:
+    #class attibute for allowing all the instances
+    all_users_post = {}
     
     
     #constructor to initialize instance variables
@@ -17,6 +19,6 @@ class User:
         return f"I am {self.name}. My email is {self.email}. I live on {self.address} and my driver licence is {self.driver_licence}"
         
        #method for user to create new post that belongs to class itself(static method)
-    def user_create_post(self,random_post):
-        post = random_post
-        self.each_user_post.append(post)   
+    def user_create_post(self,post):
+        self.each_user_post.append(post)
+        User.all_users_post[self.name] = self.each_user_post   

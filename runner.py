@@ -20,5 +20,10 @@ free_guy.user_create_post('h3')
 
 #create instance of Premium user
 premium_guy = PremiumUser("Phil", "1philloe@gmail.com", "200 hat st", "A910843")
-premium_guy.high_status()
+# premium_guy.high_status()
 #YOU are Premium
+
+premium_guy.user_create_post(1)
+premium_guy.user_create_post(2)
+premium_guy.user_create_post(3)
+print(User.all_users_post)
